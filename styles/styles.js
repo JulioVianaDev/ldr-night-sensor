@@ -1,45 +1,76 @@
-import { StyleSheet } from "react-native";
-
-export  const styles = StyleSheet.create({
-  container: {
+import { StyleSheet  } from "react-native";
+export const styles = StyleSheet.create({
+  body: {
     flex: 1,
-    display: 'flex' ,
-    backgroundColor: '#f0ff',
+    flexDirection: 'column',
+    backgroundColor: '#f7ff',
+    alignItems: 'stretch',
+    justifyContent: 'flex-start',
+  },
+  view1: {
+    flex: 1,
+    backgroundColor: '#00ffff',
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: 'column'
   },
-  view1:{
-    backgroundColor: '#ff6',
-    width: '80%',
-    height: '20%',
+  view2: {
+    flex: 2,
+    backgroundColor: '#ff00ff',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 10,
-    marginBottom: 25,
   },
-  view2:{
-    backgroundColor: '#5ff',
-    width: '80%',
-    height: '20%',
+  view3: {
+    flex: 3,
+    backgroundColor: '#ffff00',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 20,
   },
-  view3:{
-    margin:10,
-    marginBottom:40,
-  }
+  view4: {
+    flex: 1,
+    backgroundColor: '#ff0000',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  view5: {
+    flex: 1,
+    backgroundColor: '#0fff0f',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  view6: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  view7: {
+    flex: 1,
+    backgroundColor: '#0000ff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
-export const textos = StyleSheet.create({
-  Titulo:{
-    fontSize: 24,
-    fontWeight: 'bold',
+export const linhas = StyleSheet.create({
+  linha: {
+    flexDirection: 'row',
+    backgroundColor: '#ffffff',
+    alignItems: 'stretch',
+    justifyContent: 'center',
   },
-  description:{
-    fontSize: 14,
-    color: '#FFFFFF',
-    fontWeight: 'bold',
-  }
+  superlinha: {
+    flex: 1,
+    flexDirection: 'row',
+    backgroundColor: '#ffffff',
+    alignItems: 'stretch',
+    justifyContent: 'center',
+  },
+})
+export const textos = StyleSheet.create({
+  description: {
+    color:'#000000',
+    fontSize: 35,
+    fontStyle: 'italic',
+    margin: 10,
+}
 })
