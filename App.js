@@ -12,7 +12,7 @@ export default function App() {
   }
   return (
     <View style={styles.body}>
-      <Text style={styles.texto}>opa</Text>
+      <Text style={styles.texto}>Demonstração</Text>
     </View>
   );
 }
