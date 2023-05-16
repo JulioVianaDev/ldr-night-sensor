@@ -6,7 +6,9 @@ import { styles,styleTexto,styleImages } from './styles/styles';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styleTexto.titulo}>My first app!</Text>
+      <View style={styles.topo}>
+        <Text style={styleTexto.titulo}>My first App in RN!</Text>
+      </View>
       <View>
         <Text  style={styleTexto.subTitutlo}>Olá tudo bem? </Text>
       </View>

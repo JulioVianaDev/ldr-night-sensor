@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     },
     topo:{
         position: 'absolute',
-        top: 0,
+        top: 40,
     }
 });
 
