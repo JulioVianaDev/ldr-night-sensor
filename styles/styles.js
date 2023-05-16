@@ -8,7 +8,10 @@ export const styles = StyleSheet.create({
     },
     topo:{
         position: 'absolute',
+        backgroundColor: '#45135e',
         top: 40,
+        width: '100%',
+        height: 70,
     }
 });
 
@@ -16,6 +19,8 @@ export const styleTexto = StyleSheet.create({
     titulo:{
         fontSize: 36,
         color: 'white',
+        marginTop: 10,
+        textAlign: 'center'
     },
     subTitutlo:{
         fontSize: 24,
