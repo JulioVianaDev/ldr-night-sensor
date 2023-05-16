@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import {  Text, View ,Button,Linking,Image} from 'react-native';
 import logo from './images/gatito.webp';
 import tomate from './images/tomate.png'
-import { styles,styleTexto } from './styles/styles';
+import { styles,styleTexto,styleImages } from './styles/styles';
 export default function App() {
   return (
     <View style={styles.container}>
@@ -11,7 +11,7 @@ export default function App() {
         <Text  style={styleTexto.subTitutlo}>Olá tudo bem? </Text>
       </View>
       <View>
-        <Image source={logo} style={{width: 250,height:250}}/>
+        <Image source={logo} style={styleImages.padrao}/>
         <Button
           title="Ir para o meu github"
           onPress={()=>{Linking.openURL('https://github.com/JulioVianaDev')}}
@@ -25,7 +25,7 @@ export default function App() {
       <View>          
         <Image
           source={tomate}
-          style={{width: 250,height:250}}
+          style={styleImages.padrao}
         />
       </View>
       <StatusBar style="auto" />

@@ -6,6 +6,10 @@ export const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
+    topo:{
+        position: 'absolute',
+        top: 0,
+    }
 });
 
 export const styleTexto = StyleSheet.create({
@@ -20,5 +24,12 @@ export const styleTexto = StyleSheet.create({
     texto:{
         fontSize:12,
         color: 'white'
+    }
+})
+
+export const styleImages=StyleSheet.create({
+    padrao:{
+        width: 250,
+        height:250
     }
 })
