@@ -19,7 +19,7 @@ export default function App() {
           onPress={()=>{Linking.openURL('https://github.com/JulioVianaDev')}}
         />
       </View>
-      <View>
+      <View style={styles.meio}>
         <Text  style={styleTexto.texto}>
           Sou um desenvolvedor fullstack e estou em busca de aprender javascript
         </Text>
@@ -27,7 +27,7 @@ export default function App() {
       <View>          
         <Image
           source={tomate}
-          style={styleImages.padrao}
+          style={styleImages.secundaria}
         />
       </View>
       <StatusBar style="auto" />

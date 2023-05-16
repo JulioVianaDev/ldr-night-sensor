@@ -12,6 +12,9 @@ export const styles = StyleSheet.create({
         top: 40,
         width: '100%',
         height: 70,
+    },
+    meio:{
+        margin: 10
     }
 });
 
@@ -27,7 +30,7 @@ export const styleTexto = StyleSheet.create({
         color: 'white'
     },
     texto:{
-        fontSize:12,
+        fontSize:18,
         color: 'white'
     }
 })
@@ -36,5 +39,9 @@ export const styleImages=StyleSheet.create({
     padrao:{
         width: 250,
         height:250
+    } ,
+    secundaria:{
+        width: 50,
+        height:50
     }
 })
