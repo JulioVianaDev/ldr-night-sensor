@@ -31,7 +31,8 @@ export const styleTexto = StyleSheet.create({
     },
     texto:{
         fontSize:18,
-        color: 'white'
+        color: 'white',
+        textAlign:"center"
     }
 })
 
