@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Button,Linking,Image} from 'react-native';
+import {  Text, View ,Button,Linking,Image} from 'react-native';
 import logo from './images/gatito.webp';
 import tomate from './images/tomate.png'
+import { styles } from './styles/styles';
 export default function App() {
   return (
     <View style={styles.container}>
@@ -32,11 +33,4 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f2f',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
