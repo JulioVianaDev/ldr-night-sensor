@@ -2,13 +2,13 @@ import { StatusBar } from 'expo-status-bar';
 import {  Text, View ,Button,Linking,Image} from 'react-native';
 import logo from './images/gatito.webp';
 import tomate from './images/tomate.png'
-import { styles } from './styles/styles';
+import { styles,styleTexto } from './styles/styles';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>My first app!</Text>
+      <Text style={styleTexto.titulo}>My first app!</Text>
       <View>
-        <Text>Olá tudo bem? </Text>
+        <Text  style={styleTexto.subTitutlo}>Olá tudo bem? </Text>
       </View>
       <View>
         <Image source={logo} style={{width: 250,height:250}}/>
@@ -18,7 +18,7 @@ export default function App() {
         />
       </View>
       <View>
-        <Text>
+        <Text  style={styleTexto.texto}>
           Sou um desenvolvedor fullstack e estou em busca de aprender javascript
         </Text>
       </View>
