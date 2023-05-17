@@ -3,7 +3,10 @@ import {SafeAreaView, StyleSheet, Text, View,Button, Linking,Image, TextInput } 
 import { useState,useEffect } from 'react';
 import {globalStyle} from './styles/styles'
 export default function App() {
-  
+  const [listOfCartoons,setListOfCartoons] = useState([])
+  useEffect(()=>{
+
+  },[])
   return (
     <SafeAreaView  style={globalStyle.body}>
       <Text  style={globalStyle.letter}>oi</Text>
