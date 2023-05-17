@@ -4,6 +4,7 @@ import { useState,useEffect } from 'react';
 import {globalStyle} from './styles/styles'
 export default function App() {
   const [listOfCartoons,setListOfCartoons] = useState([])
+  
   useEffect(()=>{
 
   },[])
