@@ -5,8 +5,11 @@ export const globalStyle = StyleSheet.create({
         flex: 1,
         backgroundColor: 'blue',
         paddingTop: 50,
+        textAlign: 'center',
     },
     letter:{
-        color: 'pink'
+        color: 'pink',
+        fontSize: 22,
+        textAlign: 'center',
     }
 })
