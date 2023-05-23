@@ -47,7 +47,7 @@ export default function App() {
             style={styles.imgBg}
             blurRadius={8}
           >
-
+            <View style={styles.overlay}/>
             <View style={styles.viewSearch}>
               <TextInput
                 style={styles.input}

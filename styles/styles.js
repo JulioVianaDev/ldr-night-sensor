@@ -12,6 +12,10 @@ export const styles = StyleSheet.create({
       justifyContent: "flex-start",
       backgroundColor: '#000'
     },
+    overlay: {
+        ...StyleSheet.absoluteFillObject,
+        backgroundColor: `rgba(0, 0, 0, 0.3)`,
+    },
     viewSearch:{
       marginTop: 20,
       backgroundColor: '#FFF',
