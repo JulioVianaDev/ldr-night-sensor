@@ -1,6 +1,7 @@
 import { Image,View,Text } from 'react-native'
 import { useState } from 'react'
 import { imageCard } from '../styles/styles'
+import { globalStyle } from '../styles/styles'
 export const ImageCard = ({cartoon})=>{
     const [imageError,setImageError] = useState(false)
     
@@ -10,7 +11,7 @@ export const ImageCard = ({cartoon})=>{
     return(
 
         <View>
-            <Text>{cartoon.title}</Text>
+            <Text style={globalStyle.titleSession}>{cartoon.title}</Text>
             <Image
                 style={imageCard.image}
                 source={!imageError ? { uri: cartoon.image } : require('../images/erroImage.png')}

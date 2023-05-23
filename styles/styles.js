@@ -11,6 +11,10 @@ export const globalStyle = StyleSheet.create({
         color: 'pink',
         fontSize: 22,
         textAlign: 'center',
+    },
+    titleSession:{
+        color: '#fff',
+        fontSize: 18
     }
 })
 
@@ -21,4 +25,5 @@ export const imageCard= StyleSheet.create({
         borderColor: 'black',
         borderWidth: 3,
     }
+    
 })
