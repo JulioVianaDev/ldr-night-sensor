@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
         backgroundColor: `rgba(0, 0, 0, 0.3)`,
     },
     viewSearch:{
-      marginTop: 20,
+      marginTop: 40,
       backgroundColor: '#FFF',
       elevation: 10,
       borderRadius: 5,
