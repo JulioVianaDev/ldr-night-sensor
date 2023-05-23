@@ -13,3 +13,12 @@ export const globalStyle = StyleSheet.create({
         textAlign: 'center',
     }
 })
+
+export const imageCard= StyleSheet.create({
+    image:{
+        width: 120,
+        height: 180,
+        borderColor: 'black',
+        borderWidth: 3,
+    }
+})

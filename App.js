@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import {SafeAreaView, StyleSheet, Text, View,Button, Linking,Image, TextInput } from 'react-native';
+import {SafeAreaView, StyleSheet, Text, View,Button, FlatList,Image, TextInput } from 'react-native';
 import { useState,useEffect } from 'react';
-import {globalStyle} from './styles/styles'
+import {globalStyle,imageCard} from './styles/styles'
+import { ImageCard } from './components/ImageCard';
 import axios from 'axios'
 export default function App() {
   const [listOfCartoons,setListOfCartoons] = useState([])
@@ -11,9 +12,17 @@ export default function App() {
       .then(res=>setListOfCartoons(res.data))
       .catch(erro=>console.log(erro))
   },[])
+
   return (
     <SafeAreaView  style={globalStyle.body}>
-      <Text  style={globalStyle.letter}>meu texto</Text>
+      <FlatList
+        data={listOfCartoons}
+        renderItem={({item})=>
+          <ImageCard
+            cartoon={item}
+          />
+        }
+      />
     </SafeAreaView>
   );
 }
