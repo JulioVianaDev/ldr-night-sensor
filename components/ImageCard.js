@@ -1,6 +1,7 @@
 import { Image,View,Text,TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {styles} from '../styles/styles'
+
 export  const ImageCard = ({ item, index }) => { 
     return(
         <View>
