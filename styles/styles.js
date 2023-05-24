@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-import { screenWidth,screenHeight } from '../util/screen';
 export const styles = StyleSheet.create({
     container:{
       flex:1,
