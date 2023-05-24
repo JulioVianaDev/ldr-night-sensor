@@ -1,14 +1,16 @@
 import { Image,View,Text,TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {styles} from '../styles/styles'
+import { useState } from 'react';
+import errorImage from '../images/erroImage.png'
 export  const ImageCard = ({ item, index }) => { 
     return(
         <View>
         <TouchableOpacity>
-            <Image
-                source={{uri: item.image}}
-                style={styles.carouselImg}
-            />
+        <Image
+          source={{uri: item.image}}
+          style={styles.carouselImg}
+        />
             <Text style={styles.carouselText}>{item.title}</Text>
             <Icon 
             name="play-circle-outline" 
