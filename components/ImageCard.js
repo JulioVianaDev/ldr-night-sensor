@@ -1,22 +1,21 @@
-import { Image,View,Text } from 'react-native'
-import { useState } from 'react'
-import { imageCard } from '../styles/styles'
-import { globalStyle } from '../styles/styles'
-export const ImageCard = ({cartoon})=>{
-    const [imageError,setImageError] = useState(false)
-    
-    const handleError = () => {
-        setImageError(true);
-    };
+import { Image,View,Text,TouchableOpacity } from 'react-native'
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import {styles} from '../styles/styles'
+export  const ImageCard = ({ item, index }) => { 
     return(
-
-        <View>
-            <Text style={globalStyle.titleSession}>{cartoon.title}</Text>
-            <Image
-                style={imageCard.image}
-                source={!imageError ? { uri: cartoon.image } : require('../images/erroImage.png')}
-                onError={handleError}
-            />
-          </View>
-    )
-}
+    <View>
+      <TouchableOpacity>
+        <Image
+        source={{uri: item.image}}
+        style={styles.carouselImg}
+        />
+        <Text style={styles.carouselText}>{item.title}</Text>
+        <Icon 
+          name="play-circle-outline" 
+          size={30} color="#FFF" 
+          style={styles.carouselIcon} 
+        />
+      </TouchableOpacity>
+    </View>
+  );
+  };

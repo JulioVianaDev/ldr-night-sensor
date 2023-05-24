@@ -7,6 +7,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import axios from 'axios';
 import { screenWidth,screenHeight } from './util/screen';
 import { styles } from './styles/styles';
+import { ImageCard } from './components/ImageCard';
 export default function App() {
   const carouselRef = useRef(null);
 
@@ -19,25 +20,7 @@ export default function App() {
   const [background, setBackground] = useState();
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const _renderItem = ({ item, index }) => { 
-    return(
-    <View>
-      <TouchableOpacity>
-        <Image
-        source={{uri: item.image}}
-        style={styles.carouselImg}
-        />
-        <Text style={styles.carouselText}>{item.title}</Text>
-        <Icon 
-          name="play-circle-outline" 
-          size={30} color="#FFF" 
-          style={styles.carouselIcon} 
-        />
-      </TouchableOpacity>
-    </View>
-  );
-  };
-
+  
  return (
    <ScrollView style={styles.container}>
      <View style={{flex:1, height: screenHeight}}>
@@ -70,7 +53,7 @@ export default function App() {
                 style={styles.carousel}
                 ref={carouselRef}
                 data={lista}
-                renderItem={_renderItem}
+                renderItem={ImageCard}
                 sliderWidth={screenWidth}
                 itemWidth={200}
                 inactiveSlideOpacity={0.5}
