@@ -6,8 +6,8 @@ export  const ImageCard = ({ item, index }) => {
     <View>
       <TouchableOpacity>
         <Image
-        source={{uri: item.image}}
-        style={styles.carouselImg}
+            source={{uri: item.image}}
+            style={styles.carouselImg}
         />
         <Text style={styles.carouselText}>{item.title}</Text>
         <Icon 
