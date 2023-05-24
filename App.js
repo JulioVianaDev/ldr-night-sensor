@@ -3,11 +3,11 @@ import { View, ScrollView, Text,  ImageBackground, StyleSheet,
   TextInput, TouchableOpacity, Image } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import { useEffect } from 'react';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import axios from 'axios';
 import { screenWidth,screenHeight } from './util/screen';
 import { styles } from './styles/styles';
 import { ImageCard } from './components/ImageCard';
+import { BarraPesquisa } from './components/BarraPesquisa';
 export default function App() {
   const carouselRef = useRef(null);
 
@@ -31,15 +31,7 @@ export default function App() {
             blurRadius={8}
           >
             <View style={styles.overlay}/>
-            <View style={styles.viewSearch}>
-              <TextInput
-                style={styles.input}
-                placeholder="Procurando algo?"
-              />
-              <TouchableOpacity style={styles.icon}>
-                <Icon name="search" color="#000" size={25} />
-              </TouchableOpacity>
-            </View>
+            <BarraPesquisa/>
 
             <Text 
               style={{color: '#FFF', fontSize: 25, fontWeight: 'bold', 
