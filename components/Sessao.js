@@ -7,7 +7,6 @@ import { screenWidth } from "../util/screen";
 export const Sessao = ({lista,setBackground,title})=>{
     
     const carouselRef = useRef(null);
-    const [activeIndex, setActiveIndex] = useState(0);
     return(
         <>
             <Text 
@@ -28,7 +27,6 @@ export const Sessao = ({lista,setBackground,title})=>{
                     inactiveSlideOpacity={0.5}
                     onSnapToItem={ (index) => {
                         setBackground(lista[index].image);
-                        setActiveIndex(index);
                     }}
                 />  
             </View>
