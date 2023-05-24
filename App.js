@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, ScrollView,Text,   ImageBackground, StyleSheet} from 'react-native';
+import { View, ScrollView, ImageBackground, StyleSheet} from 'react-native';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { screenHeight } from './util/screen';
