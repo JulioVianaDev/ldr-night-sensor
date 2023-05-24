@@ -31,17 +31,28 @@ export default function App() {
   
  return (
   <View style={styles.container}>
-    <ScrollView style={{flex:1}}>
+  
       <View style={{flex:1, height: screenHeight}}>
           <View style={{...StyleSheet.absoluteFill, backgroundColor: '#000'}}>  
             <ImageBackground
               source={{ uri: background}}
               style={styles.imgBg}
               blurRadius={8}
-            >
-              <View style={styles.overlay}/>
+            > 
+            <ScrollView>
+
+           <View style={styles.overlay}/>
               <BarraPesquisa/>
 
+              <Sessao
+              lista={listaOfCartoons}
+              setBackground={setBackground}
+              />
+            <Sessao
+              lista={listaOfAnimations}
+              setBackground={setBackground}
+              />
+             
             <Sessao
               lista={listaOfCartoons}
               setBackground={setBackground}
@@ -50,11 +61,12 @@ export default function App() {
               lista={listaOfAnimations}
               setBackground={setBackground}
               />
-
+              </ScrollView>
+             
             </ImageBackground>
           </View>
       </View>
-    </ScrollView>
+    
     </View>
     
   );
