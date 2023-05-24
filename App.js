@@ -10,6 +10,8 @@ export default function App() {
 
   const [listaOfCartoons, setListaOfCartoons] = useState([]);
   const [listaOfAnimations, setListaOfAnimations] = useState([]);
+  const [listaOfClassics, setListaOfClassics] = useState([]);
+  const [listaOfComedyMovies, setListaOfComedyMovies] = useState([]);
   useEffect(()=>{
     axios.get('https://api.sampleapis.com/cartoons/cartoons2D')
      .then(res=>setListaOfCartoons(res.data))
@@ -24,6 +26,26 @@ export default function App() {
         setListaOfAnimations(animationsApi)
       })
       .catch(erro=>console.log(erro))
+      axios.get('https://api.sampleapis.com/movies/classic')
+        .then(res=>{
+          var animationsApi = res.data
+          for (var i = 0; i < res.data.length; i++) {
+            animationsApi[i].image = animationsApi[i].posterURL;
+            delete animationsApi[i].posterURL;
+          }
+          setListaOfClassics(animationsApi)
+        })
+        .catch(erro=>console.log(erro))
+        axios.get('https://api.sampleapis.com/movies/comedy')
+          .then(res=>{
+            var animationsApi = res.data
+            for (var i = 0; i < res.data.length; i++) {
+              animationsApi[i].image = animationsApi[i].posterURL;
+              delete animationsApi[i].posterURL;
+            }
+            setListaOfComedyMovies(animationsApi)
+          })
+          .catch(erro=>console.log(erro))
   },[])
   const [background, setBackground] = useState('https://nick.mtvnimages.com/uri/mgid:arc:content:nick.com:9cd2df6e-63c7-43da-8bde-8d77af9169c7?quality=0.7');
  
@@ -51,18 +73,18 @@ export default function App() {
                 <Sessao
                   lista={listaOfAnimations}
                   setBackground={setBackground}
-                  title='Cartoons'
+                  title='Animações '
                 />
                 
                 <Sessao
-                  lista={listaOfCartoons}
+                  lista={listaOfClassics}
                   setBackground={setBackground}
-                  title='Cartoons'
+                  title='Clássicos'
                 />
                 <Sessao
-                  lista={listaOfAnimations}
+                  lista={listaOfComedyMovies}
                   setBackground={setBackground}
-                  title='Cartoons'
+                  title='Comédia'
                 />
               </ScrollView>
             </ImageBackground>
