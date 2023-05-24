@@ -39,30 +39,32 @@ export default function App() {
               style={styles.imgBg}
               blurRadius={8}
             > 
-            <ScrollView>
+              <ScrollView>
+                <View style={styles.overlay}/>
+                <BarraPesquisa/>
 
-           <View style={styles.overlay}/>
-              <BarraPesquisa/>
-
-              <Sessao
-              lista={listaOfCartoons}
-              setBackground={setBackground}
-              />
-            <Sessao
-              lista={listaOfAnimations}
-              setBackground={setBackground}
-              />
-             
-            <Sessao
-              lista={listaOfCartoons}
-              setBackground={setBackground}
-              />
-            <Sessao
-              lista={listaOfAnimations}
-              setBackground={setBackground}
-              />
+                <Sessao
+                  lista={listaOfCartoons}
+                  setBackground={setBackground}
+                  title='Cartoons'
+                />
+                <Sessao
+                  lista={listaOfAnimations}
+                  setBackground={setBackground}
+                  title='Cartoons'
+                />
+                
+                <Sessao
+                  lista={listaOfCartoons}
+                  setBackground={setBackground}
+                  title='Cartoons'
+                />
+                <Sessao
+                  lista={listaOfAnimations}
+                  setBackground={setBackground}
+                  title='Cartoons'
+                />
               </ScrollView>
-             
             </ImageBackground>
           </View>
       </View>

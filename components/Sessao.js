@@ -4,7 +4,7 @@ import Carousel from 'react-native-snap-carousel';
 import { useRef,useState } from "react";
 import { ImageCard } from "./ImageCard";
 import { screenWidth } from "../util/screen";
-export const Sessao = ({lista,setBackground})=>{
+export const Sessao = ({lista,setBackground,title})=>{
     
     const carouselRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
@@ -14,7 +14,7 @@ export const Sessao = ({lista,setBackground})=>{
                 style={{color: '#FFF', fontSize: 25, fontWeight: 'bold', 
                 marginLeft: 10, marginVertical: 10, }}
             >
-                Acabou de chegar
+                {title}
             </Text>
 
             <View style={styles.slideView}>
