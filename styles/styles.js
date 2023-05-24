@@ -67,26 +67,11 @@ export const styles = StyleSheet.create({
       top: 15,
       right: 15,
     },
-    moreInfo:{
-      backgroundColor: '#FFF',
-      width: screenWidth,
-      height: screenHeight,
-      borderTopRightRadius: 20,
-      borderTopLeftRadius: 20,
-      flexDirection: 'row',
-      justifyContent: 'space-around',
-    },
     movieTitle:{
       paddingLeft: 15,
       fontSize: 22,
       fontWeight: 'bold',
       color: '#131313',
       marginBottom: 5,
-    },
-    movieDesc:{
-      paddingLeft: 15,
-      color: '#131313',
-      fontSize: 14,
-      fontWeight: 'bold'
     }
   });

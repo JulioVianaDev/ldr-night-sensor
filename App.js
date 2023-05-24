@@ -40,12 +40,11 @@ export default function App() {
           >
             <View style={styles.overlay}/>
             <BarraPesquisa/>
-          
+
           <Sessao
             lista={listaOfCartoons}
             setBackground={setBackground}
           />
-          
           <Sessao
             lista={listaOfAnimations}
             setBackground={setBackground}
